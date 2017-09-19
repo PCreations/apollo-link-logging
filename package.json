@@ -1,18 +1,26 @@
 {
   "name": "apollo-link-logging",
-  "version": "0.0.1",
-  "main": "dist/bundle.umd.js",
+  "repository": "https://github.com/PCreations/apollo-link-logging",
+  "version": "0.0.2",
+  "main": "./dist/src/bundle.umd.js",
+  "module": "./dist/src/loggingLink.js",
+  "jsnext:main": "./dist/src/setContextLink.js",
+  "typings": "./dist/src/setContextLink.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "tsc -p .",
+    "bundle": "rollup -c",
+    "clean:dist": "rimraf dist/*"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
+    "rimraf": "^2.6.2",
     "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2"
+    "rollup-plugin-babel": "^3.0.2",
+    "typescript": "^2.5.2"
   },
   "dependencies": {
-    "apollo-link": "0.6.1-beta.0"
+    "apollo-link-core": "^0.5.4"
   }
 }
