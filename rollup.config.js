@@ -1,18 +1,12 @@
-import babel from 'rollup-plugin-babel';
-
 export default {
-  entry: 'src/loggingLink.js',
-  dest: 'dist/bundle.umd.js',
-  format: 'umd',
-  sourceMap: true,
-  moduleName: 'loggingLink',
+  input: 'dist/src/loggingLink.js',
+  output: {
+    file: 'dist/src/bundle.umd.js',
+    format: 'umd',
+  },
+  sourcemap: true,
+  name: 'loggingLink',
   exports: 'named',
-  plugins: [
-    babel({
-      exclude: 'node_modules/**',
-      plugins: ['external-helpers']
-    }),
-  ],
   onwarn
 };
 

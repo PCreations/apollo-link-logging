@@ -1,8 +1,16 @@
-import { ApolloLink } from 'apollo-link'
+import {
+  ApolloLink,
+  Observable,
+  Operation,
+  NextLink,
+  FetchResult,
+} from 'apollo-link-core'
 
-class LoggingLink extends ApolloLink {
-
-  request(operation, forward) {
+export default class LoggingLink extends ApolloLink {
+  request(
+    operation: Operation,
+    forward: NextLink,
+  ): Observable<FetchResult> {
     console.log(`Operation: ${operation}`);
 
     const observableResults = forward(operation);
@@ -13,5 +21,3 @@ class LoggingLink extends ApolloLink {
     });
   }
 }
-
-export default LoggingLink;
