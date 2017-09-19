@@ -1,0 +1,54 @@
+Arguments: 
+  /usr/local/heroku/bin/node /usr/bin/yarn
+
+PATH: 
+  /usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  0.21.3
+
+Node version: 
+  7.10.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "apollo-link-logging",
+    "repository": "https://github.com/PCreations/apollo-link-logging",
+    "version": "0.0.3",
+    "main": "./dist/src/bundle.umd.js",
+    "module": "./dist/src/loggingLink.js",
+    "jsnext:main": "./dist/src/setContextLink.js",
+    "typings": "./dist/src/setContextLink.d.ts",
+    "scripts": {
+      "build": "tsc -p .",
+      "bundle": "rollup -c",
+      "clean:dist": "rimraf dist/*",
+      "prebuild": "npm run clean:dist",
+      "postbuild": "npm run bundle",
+      "prepublishOnly": "npm run clean:dist && npm run build"
+    },
+    "devDependencies": {
+      "babel-core": "^6.26.0",
+      "babel-plugin-external-helpers": "^6.22.0",
+      "babel-preset-env": "^1.6.0",
+      "rimraf": "^2.6.2",
+      "rollup": "^0.50.0",
+      "rollup-plugin-babel": "^3.0.2",
+      "typescript": "^2.5.2"
+    },
+    "dependencies": {
+      "apollo-link-core": "^0.5.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, open '/root/.cache/yarn/npm-ansi-regex-2.1.1-c3b33ab5ee360d86e0e628f0468ae7ef27d654df/.yarn-metadata.json'

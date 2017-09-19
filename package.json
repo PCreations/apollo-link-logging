@@ -1,7 +1,7 @@
 {
   "name": "apollo-link-logging",
   "repository": "https://github.com/PCreations/apollo-link-logging",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "./dist/src/bundle.umd.js",
   "module": "./dist/src/loggingLink.js",
   "jsnext:main": "./dist/src/setContextLink.js",
