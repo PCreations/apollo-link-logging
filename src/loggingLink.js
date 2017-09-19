@@ -1,4 +1,4 @@
-import { ApolloLink } from 'apollo-link-core'
+import { ApolloLink } from 'apollo-link'
 
 class LoggingLink extends ApolloLink {
 
